@@ -83,7 +83,7 @@ y = np.array(y)
 # Find the unique labels
 unique_labels = np.unique(y)
 
-plt.figure(figsize=(6, 6))
+fig = plt.figure(figsize=(6, 6))
 
 # Plot each label's subset with a separate scatter call
 for label in unique_labels:
@@ -98,4 +98,6 @@ plt.xlabel(f"PC 1 ({variance_ratios[0]*100:.0f}% var)")
 plt.ylabel(f"PC 2 ({variance_ratios[1]*100:.0f}% var)")
 plt.title('PCA Scatter Plot with Discrete Legend')
 plt.legend()  # Shows legend with each label
-plt.show()
+
+# Display the plot in the Streamlit app
+st.pyplot(fig)
