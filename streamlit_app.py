@@ -1,10 +1,11 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(page_title="BMW data", page_icon=":)")
-st.title("My Streamlit app")
+st.title("Analyzing the performance of different BMW models")
 st.write(
     """
-    This app is for analyzing BMW performance figures!
+    This app is for analyzing the performance figures of various BMW models!
     """
 )
 
@@ -12,7 +13,7 @@ st.write(
 # reruns (e.g. if the user interacts with the widgets).
 @st.cache_data
 def load_data():
-    df = pd.read_excel("PCA_BMW_dataset")
+    df = pd.read_excel("PCA_BMW_dataset", index_col = 0)
     return df
 
 
