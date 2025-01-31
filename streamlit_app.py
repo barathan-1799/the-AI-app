@@ -16,15 +16,17 @@ st.write(
 @st.cache_data
 def load_data():
     df = pd.read_csv("PCA_BMW_dataset.csv")
+    
+    # Renaming the first column title of the dataframe to "Model"
+    if df.columns[0] != "Model":
+        df = df.rename(columns = {df.columns[0]: "Model"})
+        
     return df
 
 # Step 4: Executing the function to load data from csv file
 df = load_data()
 
-# Step 5: Renaming the first column title of the dataframe to "Model"
-df = df.rename(columns = {df.columns[0]: "Model"})
-
-# Step 6: Displaying the data as a table using `st.dataframe`.
+# Step 5: Displaying the data as a table using `st.dataframe`.
 st.dataframe(
     df,
     use_container_width=True
