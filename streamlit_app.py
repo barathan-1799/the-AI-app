@@ -13,7 +13,7 @@ st.write(
 # reruns (e.g. if the user interacts with the widgets).
 @st.cache_data
 def load_data():
-    df = pd.read_excel("PCA_BMW_dataset.xlsx", index_col = 0)
+    df = pd.read_csv("/PCA_BMW_dataset.csv")
     return df
 
 
