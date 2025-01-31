@@ -1,3 +1,10 @@
 import streamlit as st
 
-print("BMW 330i M-Sport")
+st.set_page_config(page_title="BMW data", page_icon=":)")
+st.title("My Streamlit app")
+st.write(
+    """
+    This app is for analyzing BMW performance figures!
+    """
+)
+
