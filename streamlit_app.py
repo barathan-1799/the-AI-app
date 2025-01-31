@@ -51,7 +51,7 @@ for index, model in enumerate(model_list):
     encoded_label_list.append(label_M)
 
 # Revising labels of 0 to "Non M-Performance" and 1 to "M-Performance" labels
-new_encoded_label_list = ["M-Performance" if encoded_label == 1 else "Non M_Performance" for index, encoded_label in enumerate(encoded_label_list)]
+new_encoded_label_list = ["M-Performance" if encoded_label == 1 else "Non M-Performance" for index, encoded_label in enumerate(encoded_label_list)]
 encoded_label_list = new_encoded_label_list
 del new_encoded_label_list
 
